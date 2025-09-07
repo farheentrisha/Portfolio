@@ -93,3 +93,78 @@ a {
     display: flex;
     align-items: center;
 }
+
+
+.btn {
+    display: inline-block;
+    background: #7cf03d;
+    color: #000000;
+    padding: 14px 30px;
+    border: 1px solid #7cf03d;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #7cf03d;
+    font-size: 16px;
+    color: #1f242d;
+    font-weight: 600;
+    transition: .5s;
+}
+
+
+.btn:hover {
+    background: transparent;
+    color: #7cf03d;
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid #7cf03d;
+    margin: 0 8px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #7cf03d;
+    transition: .5s;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+
+}
+
+
+.home-info .btn-sci .sci a:hover {
+    background: #7cf03d;
+    color: #1f242d;
+    box-shadow: 0 0 10px #7cf03d;
+}
+
+.home-img .img-box{
+    width: 32vw;
+    height: 32vw;
+    background: red;
+    border-radius: 50%;
+}
+
+.home-img .img-box img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: slateblue;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.home-img .img-box .img-item img{
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+}
