@@ -8,10 +8,7 @@
 }
 
 
-body {
-    background: #1f242d;
 
-}
 
 a {
     text-decoration: none;
@@ -145,19 +142,37 @@ a {
 .home-img .img-box{
     width: 32vw;
     height: 32vw;
-    background: red;
     border-radius: 50%;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after
+{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, #7cf03d);
 }
 
 .home-img .img-box img {
     position: relative;
     width: 100%;
     height: 100%;
-    background: slateblue;
+    background: #1f242d;
+    border: .1px solid #1f242d;
     display: flex;
     justify-content: center;
     border-radius: 50%;
     overflow: hidden;
+    z-index: 1;
 }
 
 
@@ -167,4 +182,32 @@ a {
     display: block;
     width: 85%;
     object-fit: cover;
+    mix-blend-mode: lighten;
+}
+
+
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-animation .bar {
+
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+
+@keyframes show-bars {
+    100% {
+        transform: translateY(0%);
+    }
+
 }
